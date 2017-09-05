@@ -22,7 +22,7 @@ namespace Tests
             var controller = new HomeController();
             var result = Assert.IsType<ViewResult>(controller.Details(1));
             var model = Assert.IsType<Product>(result.Model);
-            Assert.Equal(1, model.ID);
+            Assert.Equal(2, model.ID);
         }
     }
 }
