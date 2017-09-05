@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Web.Models;
 
 namespace Web.Controllers
 {
@@ -7,6 +8,11 @@ namespace Web.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+
+        public IActionResult Details(int id)
+        {
+            return View(new Product { ID = id, Name = "Apples", Price = 2.00m });
         }
     }
 }
